@@ -9,13 +9,15 @@ class Person {
 
 function salida() {
 
+    // Obtenemos los datos de la persona
     const nombre = document.getElementById("nombre").value;
-    const apellido = document.getElementById("apellido").value;
-    const usuario = document.getElementById("usuario").value;
+    const password = document.getElementById("password").value;
 
-    const person = new Person(nombre, apellido, usuario);
+    // llamamos a la funcion que crea el objeto
+    const person = new Person(nombre, password);
 
-    console.log(person);
-    console.log(JSON.stringify(person))
+    // Convertimos person a JSON
+    const personJSON = JSON.stringify(person);
+    console.log(personJSON);
 
 }
