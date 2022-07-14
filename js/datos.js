@@ -1,23 +1,38 @@
 
+
 class Person {
-    constructor(name, lastname, user) {
-        this.name = name
-        this.lastname = lastname
-        this.user = user
+    constructor(password, usuario) {
+        this.password = password;
+        this.usuario = usuario;
+    }
+
+    greet() {
+        return `Hola, ${this.usuario}`;
     }
 }
+
+
 
 function salida() {
 
     // Obtenemos los datos de la persona
-    const nombre = document.getElementById("nombre").value;
     const password = document.getElementById("password").value;
+    const usuario = document.getElementById("usuario").value;
 
     // llamamos a la funcion que crea el objeto
-    const person = new Person(nombre, password);
+    const persona = new Person(password, usuario);
 
-    // Convertimos person a JSON
-    const personJSON = JSON.stringify(person);
-    console.log(personJSON);
+    // mostramos los datos de la persona
+    console.log(persona.greet());
 
+
+
+
+
+
+
+
+    // // Convertimos person a JSON
+    // const personJSON = JSON.stringify(persona);
+    // console.log(personJSON);
 }
