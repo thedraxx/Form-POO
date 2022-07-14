@@ -1,13 +1,13 @@
-
+// Hacemos referencia al formulario
+const login = document.getElementById("login");
+// Obtenemos los datos de la persona
+const password = document.getElementById("password").value;
+const usuario = document.getElementById("usuario").value;
 
 class Person {
     constructor(password, usuario) {
         this.password = password;
         this.usuario = usuario;
-    }
-
-    greet() {
-        return `Hola, ${this.usuario}`;
     }
 
     verificacionCamposVacios() {
@@ -18,14 +18,9 @@ class Person {
 }
 
 
-const login = document.getElementById("login");
 
 login.onsubmit = (e) => {
     e.preventDefault();
-
-    // Obtenemos los datos de la persona
-    const password = document.getElementById("password").value;
-    const usuario = document.getElementById("usuario").value;
 
     // llamamos a la funcion que crea el objeto
     const persona = new Person(password, usuario);
@@ -40,17 +35,6 @@ login.onsubmit = (e) => {
             document.getElementById("error").innerHTML = "";
         }, 2000);
     }
-
-
-    // mostramos los datos de la persona
-    console.log(persona.greet());
-
-
-
-
-
-
-
 
     // // Convertimos person a JSON
     // const personJSON = JSON.stringify(persona);
