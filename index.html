@@ -17,7 +17,7 @@
     </div>
 
     <!-- Formulario -->
-    <form onsubmit="salida()">
+    <form class="login" id="login">
       <fieldset class="form">
         <ul class="container-input">
           <legend class="bienvenido">Bienvenido</legend>
@@ -29,6 +29,7 @@
             <label for="password" class="names">Contrasena: </label>
             <input type="text" name="password" id="password" class="input" />
           </li>
+          <div id="error"></div>
 
           <li class="submit">
             <a href="./pages/register.html" class="button-create"
